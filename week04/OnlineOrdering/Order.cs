@@ -11,24 +11,24 @@ public class Order
 
     public double CalculateTotalCost()
     {
-         double _totalCost = 0;
+         double totalCost = 0;
         foreach (Product product in _products)
         {
             double cost = 0;
             cost = product.ComputeCost();
-            _totalCost += cost;
+            totalCost += cost;
         }
 
         if (_customer.LivesInUSA())
         {
-            _totalCost += 5;
+            totalCost += 5;
         }
         else
         {
-            _totalCost += 35;
+            totalCost += 35;
         }
 
-        return _totalCost;
+        return totalCost;
     }
     public string GenerateShippingLabel()
     {
@@ -37,13 +37,13 @@ public class Order
 
     public string GeneratePackingList()
     {
-        string _packingLabel = "";
+        string packingLabel = "";
         foreach (Product product in _products)
         {
             string labelHelper = "";
             labelHelper = $"Product ID & Name: {product.GetProductId()} ({product.GetProductName()})\n";
-            _packingLabel += labelHelper;
+            packingLabel += labelHelper;
         }
-        return _packingLabel;
+        return packingLabel;
     }
 }

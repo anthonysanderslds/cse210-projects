@@ -1,0 +1,91 @@
+YouTubeVideos Diagram
+
+Class: Video
+
+	Attributes:
+	_title: string
+	_author: string
+	_length: int
+	_comments: List<Comment>
+
+	Constructor:
+	Video(title: string, author: string, length, int
+
+	Methods:
+	GroupVideoDetails(): string //combines title, author, and length into a singe string of text
+	GetCommentCount(): int //returns the number of comments in _comments
+	AddComment(comment: Comment): void //adds a comment to _comments
+	DisplayComments(); void //iterates through _comments and prints it to the console
+
+Class: Comment
+
+	Attributes:
+	_commenter: string
+	_commentText: string
+
+	Constructor:
+	Comment(commenter: string, text: string)
+
+	Methods:
+	GetComment(): string //combines commenter and text into a single string of text
+
+OnlineOrdering Diagram
+
+Class: Products
+
+	Attributes:
+	_productName: string
+	_productId: string
+	_productPrice: double
+	_productQuantity: int
+
+	Constructor:
+	Product(productName: string, productId: int, price: double, quantity: int)
+
+	Methods:
+	GetProductName(): string //returns the product name
+	GetProductId(): int //returns the product ID
+	ComputeCost(): double //returns the cost of the product x quantity (doesn't include shipping)
+
+Class: Customer
+
+	Attributes:
+	_name: string
+	_address: Address
+
+	Constructor:
+	Customer(name: string, address: Address)
+
+	Methods:
+	GetName(): string //returns the customer name
+	GetAddress(): string //returns the customer address
+	LivesInUSA(): bool //checks if address is in USA by calling the IsUSA() method from the Address class
+
+Class: Address
+
+	Attributes:
+	_street: string
+	_city: string
+	_state: string
+	_country: string
+
+	Constructor:
+	Address(street: string, city: string, state: string, country: string)
+
+	Methods:
+	IsUSA(): bool //checks if _country is 'USA', returns true or false
+	GenerateAddressString(): string //returns _street, _city, _state, _country as a single string of text
+
+Class: Order
+
+	Attributes:
+	_products: List<Products>
+	_customer: Customer
+
+	Constructor:
+	Order(product: List<Product>, customer: Customer)
+
+	Methods:
+	CalculateTotalCost(): double //calculates the total cost of products in _products and also adds shipping cost. Calls the ComputeCost() and LivesInUSA() methods
+	GenerateShippingLabel(): string //combines customer info by calling the GetName(), GetAddress(), and GenerateAddressString() methods on the _customer list
+	GeneratePackingList(): string //combines product info by calling the GetProductName() and GetProductId()methods on the _products list
