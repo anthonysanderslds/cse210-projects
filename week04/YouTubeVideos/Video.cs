@@ -12,7 +12,7 @@ public class Video
         _title = title;
         _author = author;
         _length = length;
-        _comments = new List<Comment>();    
+        _comments = new List<Comment>();
     }
     public string GroupVideoDetails()
     {
@@ -28,11 +28,13 @@ public class Video
         _comments.Add(comment);
     }
 
-    public void DisplayComments()
+    public string DisplayComments()
     {
-        foreach(Comment comment in _comments)
+        string result = "";
+        foreach (Comment comment in _comments)
         {
-            Console.WriteLine(comment.GetComment());
+            result += comment.GetComment() + "\n";
         }
+        return result;
     }
 }

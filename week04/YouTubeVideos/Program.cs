@@ -38,7 +38,7 @@ class Program
             Console.WriteLine($"Video Info: {vid.GroupVideoDetails()}");
             Console.WriteLine($"Comment Count: {vid.GetCommentCount()}");
             Console.WriteLine($"Comment List:");
-            vid.DisplayComments();
+            Console.WriteLine(vid.DisplayComments());
             Console.WriteLine();
         }
     }
