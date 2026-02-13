@@ -1,0 +1,4 @@
+800
+Simple Goal: Exercise, Run daily, 50, True
+Eternal Goal: Scripture Study, Daily reading of the Book of Mormon, 50
+Checklist Goal: Journal Entry, Write in your journal 3 times a day, 50, 100, 3, 10

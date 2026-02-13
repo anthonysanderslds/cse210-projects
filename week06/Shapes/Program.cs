@@ -22,15 +22,5 @@ class Program
             Console.WriteLine($"This {shape} is {color} with an area of {area:0.00} square inches.");
             Console.WriteLine();
         }
-
-        //string sColor = square.GetColor();
-        //Console.WriteLine();
-
-        // string rColor = rectangle.GetColor();
-        // Console.WriteLine($" The square is {rColor} with an area of {rectangle.GetArea()} square inches.");
-        // Console.WriteLine();
-
-        // string cColor = circle.GetColor();
-        // Console.WriteLine($" The square is {cColor} with an area of {circle.GetArea():0.00} square inches.");
     }
 }
